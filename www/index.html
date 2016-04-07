@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script type="text/javascript" src="cordova.js"></script>
+	
+    <title>Review App</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section data-role="page" id="listreview" class="inactive-page">
+            <header>
+                <h2>Review App</h2>
+				<h4>Egg corporated</h4>
+                <br/>
+            </header>
+
+            <ul>
+            </ul>
+            <button class="btnfab" id="btnfab" data-href="writereview">+</button>
+			<footer>Alex King</footer>
+        </section>
+
+        <section data-role="page" id="writereview" class="inactive-page">
+            <header>
+               <h2>Review App</h2>
+                <br/>
+            </header>
+
+
+            <form>
+				<h5>Title</h5>
+                <input type="text" id="title" length="120">
+                <br/>
+				<h5>Review</h5>
+                <textarea id="review" length="240"></textarea>
+                <br/>
+
+                <span class="star-rating">   
+                                <input type="radio" name="rating" value="1"><i></i>   
+                                <input type="radio" name="rating" value="2"><i></i>   
+                                <input type="radio" name="rating" value="3"><i></i>    
+                                <input type="radio" name="rating" value="4"><i></i>   
+                                <input type="radio" name="rating" value="5"><i></i> 
+                              </span>
+                <br/>
+                <i class="fa fa-camera-retro fa-spin" id="camera"></i>
+                <br/>
+                <i class="fa fa-times fa-spin" id="close"></i>
+                <i class="fa fa-check fa-spin" id="check"></i>
+				
+            </form>
+
+
+        </section>
+
+
+        <section data-role="page" id="readreview">
+            <header>
+			<div id="blank">
+			<i class="fa fa-chevron-circle-left back"></i>
+			</div>
+                <h2>Review App</h2>
+            </header>
+
+            <label placeholder="title" id="fetchedtitle"></label>
+            <br/>
+            <textarea readonly id="fetchedreview"></textarea>
+			<img id="displayimg" height="200" width="200" src=img/>
+            <br/>
+            <i class="fa fa-check-circle" id="checkreview"></i>
+
+        </section>
+    </div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js"></script>
+   
+</html>
